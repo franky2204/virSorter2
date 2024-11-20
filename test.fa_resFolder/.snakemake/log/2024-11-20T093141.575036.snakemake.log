@@ -1,0 +1,100 @@
+CreateCondaEnvironmentException:
+Could not create conda environment from /usr/local/lib/python3.10/site-packages/virsorter/rules/../envs/vs2.yaml:
+error    libmamba Could not open lockfile '/usr/local/pkgs/cache/cache.lock'
+error    libmamba Removing lock file '/usr/local/pkgs/cache/cache.lock' failed
+    You may need to remove it manually
+error    libmamba Could not open lockfile '/usr/local/pkgs/cache/cache.lock'
+error    libmamba Removing lock file '/usr/local/pkgs/cache/cache.lock' failed
+    You may need to remove it manually
+error    libmamba Could not open lockfile '/usr/local/pkgs/cache/cache.lock'
+error    libmamba Removing lock file '/usr/local/pkgs/cache/cache.lock' failed
+    You may need to remove it manually
+error    libmamba Could not open lockfile '/usr/local/pkgs/cache/cache.lock'
+error    libmamba Removing lock file '/usr/local/pkgs/cache/cache.lock' failed
+    You may need to remove it manually
+error    libmamba Could not open lockfile '/usr/local/pkgs/cache/cache.lock'
+error    libmamba Removing lock file '/usr/local/pkgs/cache/cache.lock' failed
+    You may need to remove it manually
+error    libmamba Could not open lockfile '/usr/local/pkgs/cache/cache.lock'
+error    libmamba Removing lock file '/usr/local/pkgs/cache/cache.lock' failed
+    You may need to remove it manually
+error    libmamba Could not open lockfile '/usr/local/pkgs/cache/cache.lock'
+error    libmamba Removing lock file '/usr/local/pkgs/cache/cache.lock' failed
+    You may need to remove it manually
+error    libmamba Could not open lockfile '/usr/local/pkgs/cache/cache.lock'
+error    libmamba Removing lock file '/usr/local/pkgs/cache/cache.lock' failed
+    You may need to remove it manually
+
+# >>>>>>>>>>>>>>>>>>>>>> ERROR REPORT <<<<<<<<<<<<<<<<<<<<<<
+
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.10/site-packages/conda/exception_handler.py", line 17, in __call__
+        return func(*args, **kwargs)
+      File "/usr/local/lib/python3.10/site-packages/conda_env/cli/main.py", line 56, in do_call
+        exit_code = getattr(module, func_name)(arguments, parser)
+      File "/usr/local/lib/python3.10/site-packages/conda/notices/core.py", line 124, in wrapper
+        return func(*args, **kwargs)
+      File "/usr/local/lib/python3.10/site-packages/conda_env/cli/main_create.py", line 162, in execute
+        result[installer_type] = installer.install(
+      File "/usr/local/lib/python3.10/site-packages/mamba/mamba_env.py", line 55, in mamba_install
+        index = load_channels(pool, channel_urls, repos, prepend=False)
+      File "/usr/local/lib/python3.10/site-packages/mamba/utils.py", line 143, in load_channels
+        index = get_index(
+      File "/usr/local/lib/python3.10/site-packages/mamba/utils.py", line 124, in get_index
+        is_downloaded = dlist.download(api.MAMBA_DOWNLOAD_FAILFAST)
+    RuntimeError: Download error (6) Couldn't resolve host name [https://conda.anaconda.org/conda-forge/noarch/repodata.json.zst]
+    Could not resolve host: conda.anaconda.org
+
+`$ /usr/local/bin/mamba create --quiet --file /nitCuB/db/conda_envs/ddabdfff.yaml --prefix /nitCuB/db/conda_envs/ddabdfff`
+
+  environment variables:
+                 CIO_TEST=<not set>
+  CONDA_AUTO_UPDATE_CONDA=false
+               CONDA_ROOT=/usr/local
+           CURL_CA_BUNDLE=<not set>
+               LD_PRELOAD=<not set>
+                     PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+       REQUESTS_CA_BUNDLE=<not set>
+            SSL_CERT_FILE=<not set>
+
+     active environment : None
+       user config file : /nitCuB/.condarc
+ populated config files : 
+          conda version : 23.7.2
+    conda-build version : not installed
+         python version : 3.10.0.final.0
+       virtual packages : __archspec=1=x86_64
+                          __glibc=2.28=0
+                          __linux=6.8.0=0
+                          __unix=0=0
+       base environment : /usr/local  (read only)
+      conda av data dir : /usr/local/etc/conda
+  conda av metadata url : None
+           channel URLs : https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+          package cache : /usr/local/pkgs
+                          /nitCuB/.conda/pkgs
+       envs directories : /nitCuB/.conda/envs
+                          /usr/local/envs
+               platform : linux-64
+             user-agent : conda/23.7.2 requests/2.31.0 CPython/3.10.0 Linux/6.8.0-48-generic debian/10 glibc/2.28
+                UID:GID : 1000:1000
+             netrc file : None
+           offline mode : False
+
+
+An unexpected error has occurred. Conda has prepared the above report.
+If you suspect this error is being caused by a malfunctioning plugin,
+consider using the --no-plugins option to turn off plugins.
+
+Example: conda --no-plugins install <package>
+
+Alternatively, you can set the CONDA_NO_PLUGINS environment variable on
+the command line to run the command without plugins enabled.
+
+Example: CONDA_NO_PLUGINS=true conda install <package>
+
+
+  File "/usr/local/lib/python3.10/site-packages/snakemake/deployment/conda.py", line 350, in create

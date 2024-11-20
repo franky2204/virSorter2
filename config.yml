@@ -1,0 +1,9 @@
+db_path:
+  class: Directory
+  path: /media/franky/Seagate_Basic/Università/virsorter2/db
+
+threads: 12
+
+fasta_file:
+  class: File
+  path: /media/franky/Seagate_Basic/Università/virsorter2/test.fa
