@@ -19,36 +19,27 @@ requirements:
 
 
 
-baseCommand: ["virsorter","run"]
-
-arguments: 
-  - valueFrom: "all"
-  - valueFrom: "test_resFolder"
-    prefix: "-w"
+baseCommand: ["bash","/virSorter2SL.sh"]
 
 inputs:
   fasta_file:
     type: File
     inputBinding:
       position: 1
-      prefix: "-i"
-
+  db_path:
+    type: Directory
+    inputBinding:
+      position: 2
   threads:
     type: int?
     default: 1
     inputBinding:
-      position: 2
-      prefix: "-j"
-
-  db_path:
-    type: Directory
-    inputBinding:
       position: 3
-      prefix: "--db-dir="
-      separate: false
 
 outputs:
   viromeFolder:
     type: Directory
     outputBinding:
       glob: "*_resFolder"
+
+
