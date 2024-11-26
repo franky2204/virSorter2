@@ -5,4 +5,5 @@ RUN mamba install -y -c conda-forge wget
 VOLUME [ "/app" ]
 WORKDIR /
 COPY virSorter2SL.sh .
+RUN chmod +x virSorter2SL.sh
 ENTRYPOINT ["bash"]

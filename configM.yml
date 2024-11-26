@@ -1,0 +1,9 @@
+db_path:
+  class: Directory
+  path: /backup/fpantini/virSorter2/db
+
+threads: 30
+
+fasta_file:
+  class: File
+  path: /backup/fpantini/virSorter2/test.fa

@@ -20,7 +20,7 @@ outputs:
 
 steps:
   viromeFinder2:
-    run: cwl/virSorter2SL.cwl
+    run: cwl/virSorter2ML.cwl
     in:
       db_path: db_path
       fasta_file: fasta_file
